@@ -1,10 +1,4 @@
-let notFoutryTwo = true;
-while(notFoutryTwo)
+while(prompt("What's your favorite number?") != 42)
 {
-    let r = prompt("What's your favorite number?");
-    notFoutryTwo = Number(r) !== 42;
-    if(notFoutryTwo)
-    {
-        console.log("Are you sure?");
-    }
+    console.log("Are you sure?");
 }
