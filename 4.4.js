@@ -13,7 +13,7 @@ function pickLearner(inputAr, n)
         }
         return r;
     }
-    console.error('');
+    throw new Error('n can\'t be greater or equal to the number of elements the array contains nor can it be 0.');
 }
 
 let learner = [
