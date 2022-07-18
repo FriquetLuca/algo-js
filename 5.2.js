@@ -25,11 +25,10 @@ function randomizeCast(tvSerie)
     let cast = tvSerie.castMembers;
     for(let i = 0; i < cast.length; i++)
     {
-        let tmp1 = Math.floor(Math.random() * cast.length);
-        let tmp2 = Math.floor(Math.random() * cast.length);
-        let tmpCast = cast[tmp1];
-        cast[tmp1] = cast[tmp2];
-        cast[tmp2] = tmpCast;
+        let rndIndex = Math.floor(Math.random() * cast.length);
+        let tmpCast = cast[i];
+        cast[i] = cast[rndIndex];
+        cast[rndIndex] = tmpCast;
     }
     return cast;
 }
