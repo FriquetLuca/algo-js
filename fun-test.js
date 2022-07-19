@@ -47,7 +47,7 @@ function combinationArrayDepth(objects, index, offset, k, depth = 0, content = "
     return result; // Return the result
 }
 
-
+/*
 let resultCombination = combinationArray(6, 3);
 for(let item of resultCombination)
 {
@@ -64,7 +64,7 @@ for(let item of resultCombination)
     console.log(item);
 }
 console.log(`Total combination: ${resultCombination.length}`);
-
+*/
 
 
 
@@ -134,12 +134,14 @@ let includes = [
     'DOTS'
 ];
 resultCombination = combinationArrayNRNO(custom, 2);
+console.log(resultCombination);
+/*
 let i = 0;
 for(let combination of resultCombination)
 {
     console.log(combination);
     i++;
-}
+}*/
 /*
 
 
@@ -279,4 +281,22 @@ for(let combination of resultCombination)
         i++;
     }
 }*/
-console.log(`Total combination: ${i}`);
+//console.log(`Total combination: ${i}`);/*
+function lookChildRecursive(n, element)
+{
+    if(element.children)
+    {
+        let i = 0;
+        for(let child of element.children)
+        {
+            if(i == n - 1)
+            {
+                console.log(child);
+                lookChildRecursive(n, child);
+                break;
+            }
+            i++;
+        }
+    }
+}
+lookChildRecursive(2, document.body);
